@@ -92,35 +92,6 @@ class Predictor:
         
         # Load the model with custom objects
         try:
-            # Check if paths are relative and adjust if needed
-            if not os.path.isabs(model_path):
-                # Try to find the model in common locations
-                possible_paths = [
-                    model_path,
-                    os.path.join("forecasting_models_v6", model_path),
-                    os.path.join("model_outputs", model_path),
-                    os.path.join("..", model_path),
-                    os.path.join("..", "forecasting_models_v6", model_path)
-                ]
-                for path in possible_paths:
-                    if os.path.exists(path):
-                        model_path = path
-                        break
-            
-            if not os.path.isabs(scaler_path):
-                # Try to find the scaler in common locations
-                possible_paths = [
-                    scaler_path,
-                    os.path.join("forecasting_models_v6", scaler_path),
-                    os.path.join("model_outputs", scaler_path),
-                    os.path.join("..", scaler_path),
-                    os.path.join("..", "forecasting_models_v6", scaler_path)
-                ]
-                for path in possible_paths:
-                    if os.path.exists(path):
-                        scaler_path = path
-                        break
-            
             # Load the model with the custom SelfAttention layer
             self.model = tf.keras.models.load_model(
                 model_path,
