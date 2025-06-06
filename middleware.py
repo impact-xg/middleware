@@ -3,46 +3,44 @@ import random
 import time
 from datetime import datetime
 
-trace_data = [
-    {
-        "timestamp": 20250510125044,
-        "20250510124636": {
-            "throughput": 994.2,
-            "packets_lost": 0.0,
-            "packet_loss_rate": 0.0,
-            "jitter": 21.442,
-            "speed": "0"
-        },
-        "20250510124638": {
-            "throughput": 1150.4,
-            "packets_lost": 1.0,
-            "packet_loss_rate": 0.4,
-            "jitter": 21.398,
-            "speed": "0"
-        },
-        "20250510124640": {
-            "throughput": 1351.5,
-            "packets_lost": 0.0,
-            "packet_loss_rate": 0.0,
-            "jitter": 16.687,
-            "speed": "0"
-        },
-        "20250510124642": {
-            "throughput": 1384.5,
-            "packets_lost": 1.0,
-            "packet_loss_rate": 0.3,
-            "jitter": 20.939,
-            "speed": "0"
-        },
-        "20250510124644": {
-            "throughput": 1169.0,
-            "packets_lost": 0.0,
-            "packet_loss_rate": 0.0,
-            "jitter": 20.542,
-            "speed": "0"
-        }
-    }
-]
+trace_data = [{
+'timestamp': 20250606111138,
+'20250606111129': {
+'throughput': 880.7,
+'packets_lost': 0.0,
+'packet_loss_rate': 0.0,
+'jitter': 1.556,
+'speed': '20'
+},
+'20250606111131': {
+'throughput': 923.3,
+'packets_lost': 0.0,
+'packet_loss_rate': 0.0,
+'jitter': 2.534,
+'speed': '20'
+},
+'20250606111133': {
+'throughput': 1077.3,
+'packets_lost': 0.0,
+'packet_loss_rate': 0.0,
+'jitter': 1.815,
+'speed': '20'
+},
+'20250606111135': {
+'throughput': 1186.1,
+'packets_lost': 0.0,
+'packet_loss_rate': 0.0,
+'jitter': 2.673,
+'speed': '20'
+},
+'20250606111138': {
+'throughput': 1128.3,
+'packets_lost': 0.0,
+'packet_loss_rate': 0.0,
+'jitter': 2.044,
+'speed': '20'
+}
+}] 
 
 # Initialize the QoE predictor
 qoe_predictor = Predictor(
